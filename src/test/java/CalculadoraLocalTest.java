@@ -19,6 +19,9 @@ public class CalculadoraLocalTest {
     private static final Logger log = LoggerFactory.getLogger(CalculadoraLocalTest.class);
     private AndroidDriver driver;
 
+    /**
+     * @throws MalformedURLException
+     */
     @Before
     @SuppressWarnings("static-access")
     public void setUp() throws MalformedURLException {
@@ -37,7 +40,7 @@ public class CalculadoraLocalTest {
 
         try {
             log.info("Tentando conectar ao servidor Appium");
-            driver = new AndroidDriver(new URL("http://192.168.1.209:4723/"), options);
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
 
             log.info("Driver inicializado com sucesso!");
         } catch (Exception e) {
